@@ -33,7 +33,7 @@ public class CustomerController {
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Customers>> getCustomersByName(@RequestParam("name") String name) {
 		List<Customers> customer = customerService.findAllByName(name);
-		if (customer == null && !customer.isEmpty()) {
+		if (customer == null && customer.isEmpty()) {
 			return new ResponseEntity(HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity(customer, HttpStatus.OK);
