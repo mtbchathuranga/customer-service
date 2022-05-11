@@ -12,9 +12,6 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.NoResultException;
 import java.util.List;
 
-/**
- * @author Kalana on May, 2018
- */
 @Repository
 public class CustomerRepositoryImpl implements CustomerRepository {
     public static final Logger LOGGER = Logger.getLogger(CustomerRepositoryImpl.class.getName());
